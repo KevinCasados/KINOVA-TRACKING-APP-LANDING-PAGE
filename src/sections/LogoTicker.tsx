@@ -27,20 +27,20 @@ export const LogoTicker = () => {
               repeatType: "loop",
             }}
           >
-            <Image src={acmeLogo} className="logo-ticker-image" alt="Acme - Partner brand - Logo" />
-            <Image src={quantumLogo} className="logo-ticker-image" alt="Quantum - Partner brand - Logo" />
-            <Image src={echoLogo} className="logo-ticker-image" alt="Echo - Partner brand - Logo" />
-            <Image src={celestialLogo} className="logo-ticker-image" alt="Celestial - Partner brand - Logo" />
-            <Image src={pulseLogo} className="logo-ticker-image" alt="Pulse - Partner brand - Logo" />
-            <Image src={apexLogo} className="logo-ticker-image" alt="Apex - Partner brand - Logo" />
+            <Image src={acmeLogo} className="logo-ticker-image" alt="Acme - Partner brand - Logo" loading="lazy" />
+            <Image src={quantumLogo} className="logo-ticker-image" alt="Quantum - Partner brand - Logo" loading="lazy" />
+            <Image src={echoLogo} className="logo-ticker-image" alt="Echo - Partner brand - Logo" loading="lazy" />
+            <Image src={celestialLogo} className="logo-ticker-image" alt="Celestial - Partner brand - Logo" loading="lazy" />
+            <Image src={pulseLogo} className="logo-ticker-image" alt="Pulse - Partner brand - Logo" loading="lazy" />
+            <Image src={apexLogo} className="logo-ticker-image" alt="Apex - Partner brand - Logo" loading="lazy" />
 
             {/* Segundo conjunto de logos para animación */}
-            <Image src={acmeLogo} className="logo-ticker-image" alt="Acme - Partner brand - Logo" />
-            <Image src={quantumLogo} className="logo-ticker-image" alt="Quantum - Partner brand - Logo" />
+            <Image src={acmeLogo} className="logo-ticker-image" alt="Acme - Partner brand - Logo" loading="lazy" />
+            <Image src={quantumLogo} className="logo-ticker-image" alt="Quantum - Partner brand - Logo" loading="lazy" />
             <Image src={echoLogo} className="logo-ticker-image" alt="Echo - Partner brand - Logo" />
-            <Image src={celestialLogo} className="logo-ticker-image" alt="Celestial - Partner brand - Logo" />
-            <Image src={pulseLogo} className="logo-ticker-image" alt="Pulse - Partner brand - Logo" />
-            <Image src={apexLogo} className="logo-ticker-image" alt="Apex - Partner brand - Logo" />
+            <Image src={celestialLogo} className="logo-ticker-image" alt="Celestial - Partner brand - Logo" loading="lazy" />
+            <Image src={pulseLogo} className="logo-ticker-image" alt="Pulse - Partner brand - Logo" loading="lazy" />
+            <Image src={apexLogo} className="logo-ticker-image" alt="Apex - Partner brand - Logo" loading="lazy" />
           </motion.div>
         </article>
       </article>

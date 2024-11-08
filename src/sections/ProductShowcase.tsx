@@ -35,7 +35,7 @@ export const ProductShowcase = () => {
         </article>
         
         <article className="relative flex justify-center mt-10">
-          <Image src={productImage} alt="Main product view showcasing tracking features" className="mt-10" />
+          <Image src={productImage} alt="Main product view showcasing tracking features" className="mt-10" loading="lazy"/>
           <motion.img
             src={pyramidImage.src}
             alt="Decorative pyramid shape image"
@@ -43,6 +43,7 @@ export const ProductShowcase = () => {
             width={262}
             className="absolute -right-36 -top-32 hidden md:block"
             style={{ translateY }}
+            loading="lazy"
           />
           <motion.img
             src={tubeImage.src}
@@ -51,6 +52,7 @@ export const ProductShowcase = () => {
             width={248}
             className="absolute -left-36 bottom-24 hidden md:block"
             style={{ translateY }}
+            loading="lazy"
           />
         </article>
       </article>

@@ -73,11 +73,11 @@ export const Pricing = () => {
               key={index}
               className={twMerge(
                 "card",
-                tier.inverse === true && "border-black bg-black text-white",
+                tier.inverse === true && "border-black bg-gradient-to-b from-[#190d2e] to-[#3d1a71] shadow-[0px_0px_12px_#8c45ff] text-white",
               )}
               aria-labelledby={`tier-title-${index}`}
             >
-              <header className="flex justify-between items-center">
+              <article className="flex justify-between items-center">
                 <h3
                   id={`tier-title-${index}`}
                   className={twMerge(
@@ -103,7 +103,7 @@ export const Pricing = () => {
                     </motion.span>
                   </div>
                 )}
-              </header>
+              </article>
 
               <div className="mt-[30px] flex items-baseline gap-1">
                 <span className="text-4xl font-bold leading-none tracking-tighter">

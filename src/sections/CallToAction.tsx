@@ -4,6 +4,7 @@ import starImage from "@/assets/star.webp";
 import springImage from "@/assets/spring.webp";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Button } from "@/components/Button";
 
 export const CallToAction = () => {
   const sectionRef = useRef(null);
@@ -45,7 +46,7 @@ export const CallToAction = () => {
           />
         </article>
         <article className="mt-10 flex justify-center gap-2">
-          <button className="btn btn-primary" aria-label="Get the app for free">Get for free</button>
+          <Button aria-label="Get the app for free">Get for Free</Button>
           <button className="btn btn-text gap-1" aria-label="Learn more about the app">
             <span>Learn more</span> <ArrowIcon className="h-5 w-5" />
           </button>

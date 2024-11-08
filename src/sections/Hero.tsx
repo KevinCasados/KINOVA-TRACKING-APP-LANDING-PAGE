@@ -44,6 +44,7 @@ export const Hero = () => {
             <motion.img
               src={cogImage.src}
               alt="Rotating cog image as decorative element"
+              loading="lazy"
               className="md:absolute md:-left-6 md:h-full md:w-auto md:max-w-none lg:left-0"
               animate={{
                 translateY: [-30, 30],
@@ -61,11 +62,13 @@ export const Hero = () => {
               width={220}
               height={220}
               alt="Cylinder shape image as decorative element"
+              loading="lazy"
               style={{ translateY }}
             />
             <motion.img
               src={noodleImage.src}
               alt="Decorative noodle shape image"
+              loading="lazy"
               width={220}
               className="hidden lg:absolute lg:left-[448px] lg:top-[524px] lg:block lg:rotate-[30deg]"
               style={{ translateY, rotate: 30 }}

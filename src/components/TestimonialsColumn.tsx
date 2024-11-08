@@ -44,6 +44,7 @@ function TestimonialsColumn({
                     width={40}
                     height={40}
                     className="rounded-full"
+                    loading="lazy"
                   />
                   <figcaption className="flex flex-col">
                     <h3 className="font-medium leading-5 tracking-tight">

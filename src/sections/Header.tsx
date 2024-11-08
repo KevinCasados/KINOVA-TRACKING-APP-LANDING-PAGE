@@ -23,7 +23,7 @@ export const Header = () => {
         <article className="container">
           <div className="flex items-center justify-between">
             <Link href="/" aria-label="Kinova Home">
-              <Logo alt="Kinova company logo" className="h-10 w-10" />
+              <Logo alt="Kinova company logo" className="h-10 w-10" loading="lazy" />
             </Link>
 
             <button aria-label="Open menu" className="h-5 w-5 md:hidden">

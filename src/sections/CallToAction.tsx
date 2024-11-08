@@ -33,6 +33,7 @@ export const CallToAction = () => {
             width={360}
             className="absolute -left-[350px] -top-[137px]"
             style={{ translateY }}
+            loading="lazy"
           />
           <motion.img
             src={springImage.src}
@@ -40,6 +41,7 @@ export const CallToAction = () => {
             width={360}
             className="absolute -right-[331px] -top-[19px]"
             style={{ translateY }}
+            loading="lazy"
           />
         </article>
         <article className="mt-10 flex justify-center gap-2">

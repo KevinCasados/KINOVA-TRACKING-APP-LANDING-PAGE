@@ -18,7 +18,7 @@ const testimonials = [
     username: "@jamietechguru00",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
+    text: "Our team's productivity has skyrocketed since we started using this tool.",
     imageSrc: avatar2.src,
     name: "Josh Smith",
     username: "@jjsmith",
@@ -73,19 +73,20 @@ const thirdColumn = testimonials.slice(6, 9);
 
 export const Testimonials = () => {
   return (
-    <section className="bg-white py-24">
-      <div className="container">
-        <div className="flex justify-center">
-          <div className="tag">Testimonials</div>
-        </div>
-        <div className="section-heading">
-          <h2 className="section-title mt-5">What our users say</h2>
+    <section className="bg-white py-24" aria-labelledby="testimonials-heading">
+      <article className="container">
+        <article className="flex flex-col items-center section-heading text-center">
+          <p className="tag">Testimonials</p>
+          <h2 id="testimonials-heading" className="section-title mt-5">
+            What our users say
+          </h2>
           <p className="section-description mt-5">
             From intuitive design to powerful features, our app has become an
             essential tool for users around the world.
           </p>
-        </div>
-        <div className="mt-10 flex max-h-[738px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
+        </article>
+
+        <article className="mt-10 flex max-h-[738px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
           <TestimonialsColumn columnData={firstColumn} duration={15} />
           <TestimonialsColumn
             columnData={secondColumn}
@@ -97,8 +98,8 @@ export const Testimonials = () => {
             className="hidden lg:block"
             duration={17}
           />
-        </div>
-      </div>
+        </article>
+      </article>
     </section>
   );
 };

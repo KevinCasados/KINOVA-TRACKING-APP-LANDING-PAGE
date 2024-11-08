@@ -10,9 +10,13 @@ import { motion } from "framer-motion";
 
 export const LogoTicker = () => {
   return (
-    <div className="bg-white py-8 md:py-12">
-      <div className="container">
-        <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+    <section className="bg-white py-8 md:py-12" aria-label="Trusted by these brands">
+      <article className="container">
+        <article 
+          className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]"
+          role="img"
+          aria-label="Scrolling logos of partner brands"
+        >
           <motion.div
             className="flex flex-none gap-14 pr-14"
             animate={{ translateX: "-50%" }}
@@ -23,39 +27,23 @@ export const LogoTicker = () => {
               repeatType: "loop",
             }}
           >
-            <Image src={acmeLogo} className="logo-ticker-image" alt="Acme" />
-            <Image
-              src={quantumLogo}
-              className="logo-ticker-image"
-              alt="Quantum"
-            />
-            <Image src={echoLogo} className="logo-ticker-image" alt="Echo" />
-            <Image
-              src={celestialLogo}
-              className="logo-ticker-image"
-              alt="Celestial"
-            />
-            <Image src={pulseLogo} className="logo-ticker-image" alt="Pulse" />
-            <Image src={apexLogo} className="logo-ticker-image" alt="Apex" />
+            <Image src={acmeLogo} className="logo-ticker-image" alt="Acme - Partner brand - Logo" />
+            <Image src={quantumLogo} className="logo-ticker-image" alt="Quantum - Partner brand - Logo" />
+            <Image src={echoLogo} className="logo-ticker-image" alt="Echo - Partner brand - Logo" />
+            <Image src={celestialLogo} className="logo-ticker-image" alt="Celestial - Partner brand - Logo" />
+            <Image src={pulseLogo} className="logo-ticker-image" alt="Pulse - Partner brand - Logo" />
+            <Image src={apexLogo} className="logo-ticker-image" alt="Apex - Partner brand - Logo" />
 
-            {/* !!! Second set of logos for animation */}
-            <Image src={acmeLogo} className="logo-ticker-image" alt="Acme" />
-            <Image
-              src={quantumLogo}
-              className="logo-ticker-image"
-              alt="Quantum"
-            />
-            <Image src={echoLogo} className="logo-ticker-image" alt="Echo" />
-            <Image
-              src={celestialLogo}
-              className="logo-ticker-image"
-              alt="Celestial"
-            />
-            <Image src={pulseLogo} className="logo-ticker-image" alt="Pulse" />
-            <Image src={apexLogo} className="logo-ticker-image" alt="Apex" />
+            {/* Segundo conjunto de logos para animación */}
+            <Image src={acmeLogo} className="logo-ticker-image" alt="Acme - Partner brand - Logo" />
+            <Image src={quantumLogo} className="logo-ticker-image" alt="Quantum - Partner brand - Logo" />
+            <Image src={echoLogo} className="logo-ticker-image" alt="Echo - Partner brand - Logo" />
+            <Image src={celestialLogo} className="logo-ticker-image" alt="Celestial - Partner brand - Logo" />
+            <Image src={pulseLogo} className="logo-ticker-image" alt="Pulse - Partner brand - Logo" />
+            <Image src={apexLogo} className="logo-ticker-image" alt="Apex - Partner brand - Logo" />
           </motion.div>
-        </div>
-      </div>
-    </div>
+        </article>
+      </article>
+    </section>
   );
 };

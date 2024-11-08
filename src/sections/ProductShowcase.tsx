@@ -13,29 +13,32 @@ export const ProductShowcase = () => {
     offset: ["start end", "end start"],
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
     <section
       ref={sectionRef}
       className="overflow-x-clip bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24"
+      aria-labelledby="product-showcase-heading"
     >
-      <div className="container">
-        <div className="section-heading">
+      <article className="container">
+        <article className="section-heading text-center">
           <div className="flex justify-center">
-            <div className="tag">Boost productivity</div>
+            <p className="tag">Boost productivity</p>
           </div>
-          <h2 className="section-title mt-5">
+          <h2 id="product-showcase-heading" className="section-title mt-5">
             A more effective way to track progress
           </h2>
           <p className="section-description mt-5">
             Celebrate the joy of accomplishment with an app designed to track
             your progress and motivate your efforts.
           </p>
-        </div>
-        <div className="relative">
-          <Image src={productImage} alt="Product" className="mt-10" />
+        </article>
+        
+        <article className="relative flex justify-center mt-10">
+          <Image src={productImage} alt="Main product view showcasing tracking features" className="mt-10" />
           <motion.img
             src={pyramidImage.src}
-            alt="Pyramid"
+            alt="Decorative pyramid shape image"
             height={262}
             width={262}
             className="absolute -right-36 -top-32 hidden md:block"
@@ -43,14 +46,14 @@ export const ProductShowcase = () => {
           />
           <motion.img
             src={tubeImage.src}
-            alt="Tube"
+            alt="Decorative tube shape image"
             height={248}
             width={248}
             className="absolute -left-36 bottom-24 hidden md:block"
             style={{ translateY }}
           />
-        </div>
-      </div>
+        </article>
+      </article>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
-import productImage from "@/assets/product-image.png";
-import pyramidImage from "@/assets/pyramid.png";
-import tubeImage from "@/assets/tube.png";
+import productImage from "@/assets/product-image.webp";
+import pyramidImage from "@/assets/pyramid.webp";
+import tubeImage from "@/assets/tube.webp";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";

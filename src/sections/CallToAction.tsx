@@ -18,36 +18,37 @@ export const CallToAction = () => {
     <section
       ref={sectionRef}
       className="overflow-x-clip bg-gradient-to-b from-white to-[#D2DCFF] pb-24"
+      aria-labelledby="cta-heading"
     >
-      <div className="container">
-        <div className="section-heading relative">
-          <h2 className="section-title">Sign up for free today</h2>
+      <section className="container">
+        <article className="section-heading relative text-center">
+          <h2 id="cta-heading" className="section-title">Sign up for free today</h2>
           <p className="section-description mt-5">
             Celebrate the joy of accomplishment with an app designed to track
             your progress and motivate your efforts.
           </p>
           <motion.img
             src={starImage.src}
-            alt="Star Image"
+            alt="Decorative blue star image"
             width={360}
             className="absolute -left-[350px] -top-[137px]"
             style={{ translateY }}
           />
           <motion.img
             src={springImage.src}
-            alt="Spring Image"
+            alt="Decorative blue spring image"
             width={360}
             className="absolute -right-[331px] -top-[19px]"
             style={{ translateY }}
           />
-        </div>
-        <div className="mt-10 flex justify-center gap-2">
-          <button className="btn btn-primary">Get for free </button>
-          <button className="btn btn-text gap-1">
+        </article>
+        <article className="mt-10 flex justify-center gap-2">
+          <button className="btn btn-primary" aria-label="Get the app for free">Get for free</button>
+          <button className="btn btn-text gap-1" aria-label="Learn more about the app">
             <span>Learn more</span> <ArrowIcon className="h-5 w-5" />
           </button>
-        </div>
-      </div>
+        </article>
+      </section>
     </section>
   );
 };

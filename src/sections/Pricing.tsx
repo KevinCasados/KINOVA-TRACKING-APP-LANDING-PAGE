@@ -57,26 +57,29 @@ const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section className="py-24">
-      <div className="container">
-        <div className="section-heading">
-          <h2 className="section-title">Pricing</h2>
+    <section className="py-24" aria-labelledby="pricing-heading">
+      <article className="container">
+        <article className="section-heading text-center">
+          <h2 id="pricing-heading" className="section-title">Pricing</h2>
           <p className="section-description mt-5">
             Free forever. Upgrade for unlimited tasks, better security, and
             exclusive features.
           </p>
-        </div>
-        <div className="mt-10 flex flex-col items-center gap-6 lg:flex-row lg:items-end lg:justify-center">
+        </article>
+        
+        <article className="mt-10 flex flex-col items-center gap-6 lg:flex-row lg:items-end lg:justify-center">
           {pricingTiers.map((tier, index) => (
-            <div
+            <article
               key={index}
               className={twMerge(
                 "card",
                 tier.inverse === true && "border-black bg-black text-white",
               )}
+              aria-labelledby={`tier-title-${index}`}
             >
-              <div className="flex justify-between">
+              <header className="flex justify-between items-center">
                 <h3
+                  id={`tier-title-${index}`}
                   className={twMerge(
                     "text-lg font-bold text-black/50",
                     tier.inverse === true && "text-white/60",
@@ -100,7 +103,8 @@ export const Pricing = () => {
                     </motion.span>
                   </div>
                 )}
-              </div>
+              </header>
+
               <div className="mt-[30px] flex items-baseline gap-1">
                 <span className="text-4xl font-bold leading-none tracking-tighter">
                   ${tier.monthlyPrice}
@@ -109,14 +113,17 @@ export const Pricing = () => {
                   /month
                 </span>
               </div>
+
               <button
                 className={twMerge(
                   "btn btn-primary mt-[30px] w-full",
                   tier.inverse === true && "border-white bg-white text-black",
                 )}
+                aria-label={`Sign up for ${tier.title} plan`}
               >
                 {tier.buttonText}
               </button>
+
               <ul className="mt-8 flex flex-col gap-5">
                 {tier.features.map((feature, index) => (
                   <li key={index} className="flex items-center gap-4 text-sm">
@@ -125,10 +132,10 @@ export const Pricing = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
-        </div>
-      </div>
+        </article>
+      </article>
     </section>
   );
 };

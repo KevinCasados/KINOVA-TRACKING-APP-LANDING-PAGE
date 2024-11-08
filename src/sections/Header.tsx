@@ -5,6 +5,7 @@ import Logo from "@/assets/logo-kinova.svg";
 import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 
 export const Header = () => {
   return (
@@ -31,12 +32,12 @@ export const Header = () => {
             </button>
 
             <nav className="hidden items-center gap-6 text-black/60 md:flex" aria-label="Main navigation">
-              <Link href="/">About</Link>
-              <Link href="/">Features</Link>
-              <Link href="/">Customers</Link>
-              <Link href="/">Updates</Link>
-              <Link href="/">Help</Link>
-              <button className="btn btn-primary" aria-label="Get the app for free">Get for free</button>
+              <Link className="hover:bg-gradient-to-b from-black to-[#001e80] bg-clip-text" href="/">About</Link>
+              <Link className="hover:bg-gradient-to-b from-black to-[#001e80] bg-clip-text" href="/">Features</Link>
+              <Link className="hover:bg-gradient-to-b from-black to-[#001e80] bg-clip-text" href="/">Customers</Link>
+              <Link className="hover:bg-gradient-to-b from-black to-[#001e80] bg-clip-text" href="/">Updates</Link>
+              <Link className="hover:bg-gradient-to-b from-black to-[#001e80] bg-clip-text" href="/">Help</Link>
+              <Button aria-label="Get the app for free">Get for Free</Button>
             </nav>
           </div>
         </article>

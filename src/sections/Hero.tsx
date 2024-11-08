@@ -6,6 +6,7 @@ import noodleImage from "@/assets/noodle.webp";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Button } from "@/components/Button";
 
 export const Hero = () => {
   const heroRef = useRef(null);
@@ -34,7 +35,7 @@ export const Hero = () => {
               successes.
             </p>
             <div className="mt-[30px] flex items-center gap-1">
-              <button className="btn btn-primary" aria-label="Get the app for free">Get for free</button>
+              <Button aria-label="Get the app for free">Get for Free</Button>
               <button className="btn btn-text gap-1" aria-label="Learn more about the app">
                 <span>Learn more</span> <ArrowIcon className="h-5 w-5" />
               </button>

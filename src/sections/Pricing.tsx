@@ -87,7 +87,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
   return (
     <section className={cardClasses} aria-labelledby={`tier-title-${index}`}>
       <article className="flex justify-between items-center">
-        <h3 id={`tier-title-${index}`} className={isInverse ? "text-lg font-bold text-white/60" : "text-lg font-bold text-black/50"}>
+        <h3 id={`tier-title-${index}`} className={isInverse ? "text-lg font-bold text-white/60" : "text-lg font-bold bg-gradient-to-b from-black to-[#001e80] bg-clip-text"}>
           {tier.title}
         </h3>
         {isPopular && (
@@ -112,7 +112,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
         <span className="text-4xl font-bold leading-none tracking-tighter">
           ${tier.monthlyPrice}
         </span>
-        <span className="font-bold tracking-tight text-black/50">
+        <span className="font-bold tracking-tight text-black/80">
           /month
         </span>
       </article>

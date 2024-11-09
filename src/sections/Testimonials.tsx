@@ -10,7 +10,14 @@ import avatar8 from "@/assets/avatar-8.webp";
 import avatar9 from "@/assets/avatar-9.webp";
 import TestimonialsColumn from "@/components/TestimonialsColumn";
 
-const testimonials = [
+interface Testimonial {
+  text: string;
+  imageSrc: string;
+  name: string;
+  username: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
     imageSrc: avatar1.src,
@@ -74,8 +81,8 @@ const thirdColumn = testimonials.slice(6, 9);
 export const Testimonials = () => {
   return (
     <section className="bg-white py-24" aria-labelledby="testimonials-heading">
-      <article className="container">
-        <article className="flex flex-col items-center section-heading text-center">
+      <div className="container">
+        <div className="section-heading text-center">
           <p className="tag">Testimonials</p>
           <h2 id="testimonials-heading" className="section-title mt-5">
             What our users say
@@ -84,9 +91,9 @@ export const Testimonials = () => {
             From intuitive design to powerful features, our app has become an
             essential tool for users around the world.
           </p>
-        </article>
+        </div>
 
-        <article className="mt-10 flex max-h-[738px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
+        <div className="mt-10 flex max-h-[738px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
           <TestimonialsColumn columnData={firstColumn} duration={15} />
           <TestimonialsColumn
             columnData={secondColumn}
@@ -98,8 +105,8 @@ export const Testimonials = () => {
             className="hidden lg:block"
             duration={17}
           />
-        </article>
-      </article>
+        </div>
+      </div>
     </section>
   );
 };

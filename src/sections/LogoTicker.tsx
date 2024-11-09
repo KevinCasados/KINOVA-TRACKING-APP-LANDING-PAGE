@@ -15,7 +15,6 @@ export const LogoTicker = () => {
         <article 
           className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]"
           role="img"
-          aria-label="Scrolling logos of partner brands"
         >
           <motion.div
             className="flex flex-none gap-14 pr-14"

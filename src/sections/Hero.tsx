@@ -45,7 +45,6 @@ export const Hero = () => {
             <motion.img
               src={cogImage.src}
               alt="Rotating cog image as decorative element"
-              loading="lazy"
               className="md:absolute md:-left-6 md:h-full md:w-auto md:max-w-none lg:left-0"
               animate={{
                 translateY: [-30, 30],

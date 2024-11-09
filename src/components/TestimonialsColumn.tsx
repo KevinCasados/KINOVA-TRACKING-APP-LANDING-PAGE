@@ -1,58 +1,59 @@
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 
-interface columnData {
+interface ColumnData {
   text: string;
   imageSrc: string;
   name: string;
   username: string;
 }
 
-function TestimonialsColumn({
-  columnData,
-  className,
-  duration,
-}: {
-  columnData: columnData[];
+interface TestimonialsColumnProps {
+  columnData: ColumnData[];
   className?: string;
   duration?: number;
-}) {
+}
+
+const TestimonialsColumn: React.FC<TestimonialsColumnProps> = ({
+  columnData,
+  className = "",
+  duration = 10,
+}) => {
   return (
-    <section className={className} aria-label="Customer testimonials">
+    <section className={className}>
       <motion.div
         className="flex flex-col gap-6 pb-6"
         animate={{ translateY: "-50%" }}
         transition={{
           repeat: Infinity,
-          duration: duration || 10,
+          duration,
           repeatType: "loop",
           ease: "linear",
         }}
       >
-        {[...new Array(2)].fill(0).map((_, index) => (
-          <React.Fragment key={index}>
+        {Array.from({ length: 2 }).map((_, outerIndex) => (
+          <React.Fragment key={outerIndex}>
             {columnData.map(({ text, imageSrc, name, username }, index) => (
-              <article key={index} className="card" aria-label={`Testimonial from ${name}`}>
-                <blockquote className="text">
-                  {text}
-                </blockquote>
-                <figure className="mt-5 flex items-center gap-2">
+              <article key={`${outerIndex}-${index}`} className="card">
+                <p>{text}</p>
+                <article className="mt-5 flex items-center gap-2">
                   <Image
                     src={imageSrc}
-                    alt={`Profile picture of ${name}`}
+                    alt={`Avatar of ${name}`}
                     width={40}
                     height={40}
                     className="rounded-full"
                     loading="lazy"
                   />
-                  <figcaption className="flex flex-col">
-                    <h3 className="font-medium leading-5 tracking-tight">
+                  <div className="flex flex-col">
+                    <span className="font-medium leading-5 tracking-tight">
                       {name}
-                    </h3>
-                    <p className="leading-5 tracking-tight">@{username}</p>
-                  </figcaption>
-                </figure>
+                    </span>
+                    <span className="leading-5 tracking-tight">{username}</span>
+                  </div>
+                </article>
               </article>
             ))}
           </React.Fragment>
@@ -60,6 +61,6 @@ function TestimonialsColumn({
       </motion.div>
     </section>
   );
-}
+};
 
 export default TestimonialsColumn;

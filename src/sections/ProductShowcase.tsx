@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export const ProductShowcase = () => {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -35,7 +35,12 @@ export const ProductShowcase = () => {
         </article>
         
         <article className="relative flex justify-center mt-10">
-          <Image src={productImage} alt="Main product view showcasing tracking features" className="mt-10" loading="lazy"/>
+          <Image
+            src={productImage}
+            alt="Main product view showcasing tracking features"
+            className="mt-10"
+            loading="lazy"
+          />
           <motion.img
             src={pyramidImage.src}
             alt="Decorative pyramid shape image"
